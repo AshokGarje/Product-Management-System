@@ -11,6 +11,12 @@ DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = os.getenv("DB_PORT", "3306")
 DB_NAME = os.getenv("DB_NAME")
 
+# DB_USER=ashok_user
+# DB_PASS=Mysql#123
+# DB_HOST=localhost
+# DB_PORT=3306
+# DB_NAME=ashok
+
 db_url = f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}?charset=utf8mb4"
 
 engine = create_engine(db_url, echo=False, future=True)
